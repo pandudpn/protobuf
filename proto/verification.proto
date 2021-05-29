@@ -1,6 +1,7 @@
 syntax = "proto3";
+package verification;
 
-option go_package = "./notifications/email";
+option go_package = "./pb";
 
 message VerificationRequest {
     string email = 1;

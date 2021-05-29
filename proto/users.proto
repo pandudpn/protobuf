@@ -1,6 +1,7 @@
 syntax = "proto3";
+package users;
 
-option go_package = "./users";
+option go_package = "./pb";
 
 import "google/protobuf/timestamp.proto";
 
@@ -37,8 +38,8 @@ message User {
     bool deleted = 8;
     google.protobuf.Timestamp created_at = 9;
     google.protobuf.Timestamp updated_at = 10;
-    Tokopedia tokopedia = 11;
-    Shopee shopee = 12;
+    optional Tokopedia tokopedia = 11;
+    optional Shopee shopee = 12;
 }
 
 message Email {
